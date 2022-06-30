@@ -27,7 +27,22 @@ class ExampleTest extends TestCase
 
         $this->assertTrue(substr_count($html,'bg-sky-500') == 15);
         
+
+    }
+
+    public function test_cuarta()
+    {
+        $response = $this->get('/jugar/123456123456123456123456123456');
+
+        $this->assertTrue(substr_count($html,'bg-red-500') == 15);
         
     }
 
+    public function test_quinta()
+    {
+        $response = $this->get('/jugar/123456123456123456123456123456');
+
+        $this->assertTrue(substr_count($html,'bg-gray-200') == 12);
+        
+    }
 }
