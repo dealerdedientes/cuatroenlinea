@@ -7,14 +7,27 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function primertest()
+    public function test_primero()
     {
         $response = $this->get('/jugar/123');
 
         $response->assertStatus(200);
     }
+
+    public function test_segundo()
+    {
+        $response = $this->get('/jugar/xz');
+        
+        $response->assertStatus(500);
+    }
+
+    public function test_tercero()
+    {
+        $response = $this->get('/jugar/123456123456123456123456123456');
+
+        $this->assertTrue(substr_count($html,'bg-sky-500') == 15);
+        
+        
+    }
+
+}
