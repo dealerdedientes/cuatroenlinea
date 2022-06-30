@@ -12,25 +12,9 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function primertest()
     {
-        $response = $this->get('/jugar/1');
+        $response = $this->get('/jugar/123');
 
         $response->assertStatus(200);
     }
-
-    public function test_example()
-    {
-        $response = $this->get('/jugar/1');
-
-        $response->assertStatus(200);
-    }
-
-    public function test_example()
-    {
-        $response = $this->get('/jugar/1');
-
-        $response->assertStatus(200);
-    }
-}
-
